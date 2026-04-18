@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Write an expressJS code which loads login.html file upon browsing localhost:3010. The Login.html file contains input for username,password and two checkboxes named remember and subscribe,on submitting the file it should go to /datapage where username,password and selected checkboxes are pinted,inaddition to that a logout button should be there,onclicking thisbutton it should go back to home page “localhost:3010/”.(GET/POST anymethod can be used)[Write all necessary files code]-->
+</head>
+<body>
+    <form action="/login" method="get">username:
+        <input type="text" name="un"><br><br>
+        password<input type="password" name="pw"><br><br>
+        <input type="checkbox" name="rem" value="yes">remember me<br><br>
+        <input type="checkbox" name="sub" value="yes">subscribe<br><br>
+        <input type="submit" value="login"><br><br>
+    </form>
+</body>
+</html>
+

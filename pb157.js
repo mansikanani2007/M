@@ -1,7 +1,7 @@
 //Write an ExpressJS to take a UserName, Password, Textarea for “message” & submit button using get method.1) After clicking submit button the content ofsubmitted details should be represented on “/login” page along with one“show vowel” link.2) By clicking “show vowel” link count of vowel used insubmitted “message” will display on “/message” page. (Use next()to route page
 const express = require("express");
 const app = express();
-app.use(express.urlencoded({ extended: true }));
+
 app.get("/", (req, res) => {
     res.send(`<html>
                 <body>
@@ -26,5 +26,6 @@ app.get("/login", (req,res,next)=> {
         }
     }next();
 })
-
+app.get("/login", (req,res)=> {
+    res.send(`username :${req.query.un}<br> password:${req.query.pw}<br> <a href="/message?v=${count}>show</a>`)});
 app.listen(5000,()=>console.log("started"));
